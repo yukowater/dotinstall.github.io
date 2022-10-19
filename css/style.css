@@ -1,6 +1,508 @@
 @charset "utf-8";
-h1 {
-    font-size: 24px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #ddd;
+
+/* 共通部分
+------------------------------- */
+html {
+    font-size: 100%;
 }
+
+body {
+    margin: 0 30px;
+    border-style: dotted;
+}
+
+section {
+    border: solid 2px;
+    margin: 0 0 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* HEADER
+------------------------------- */
+.page_header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    background-color: gray;
+    width: 15%;
+}
+
+.main_logo {
+    background-color: lightgray;
+    width: 80%;
+}
+
+.nav {
+    background: gray;
+    width: 80%;
+}
+
+.main_nav {
+    background: gray;
+    display: flex;
+    list-style: none;
+}
+
+.main_nav li {
+    margin-left: 20px;
+    background-color: lightgray;
+}
+
+/* HOME
+------------------------------- */
+.home_text {
+    background-color: gray;
+    margin-top: 10rem;
+    margin-bottom: 20px;
+    width: 45%;
+}
+
+.home_text h5 {
+    background-color: lightgray;
+    margin-bottom: 10px;
+}
+
+.home_text h1 {
+    background-color: lightgray;
+    margin-bottom: 10px;
+}
+
+.home_text p {
+    background-color: lightgray;
+    margin-bottom: 10px;
+}
+
+/* EVENT
+------------------------------- */
+.event_container {
+    display: flex;
+    grid-template-columns: 2fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.seminar,
+.newsletter {
+    /* border-style: solid; */
+    width: 100%;
+}
+
+.seminar_title {
+    background-color: gray;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.seminar_title .title_en {
+    background-color: lightgray;
+}
+
+.seminar_title .title_jp {
+    background-color: lightgray;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+.schedule_list {
+    background-color: gray;
+    margin-bottom: 20px;
+}
+
+.schedule {
+    background-color: gray;
+    margin-bottom: 20px;
+    display: flex;
+    list-style: none;
+}
+
+.schedule li {
+    margin-right: 20px;
+    background-color: lightgray;
+}
+
+.schedule_list p {
+    background-color: lightgray;
+}
+
+.more {
+    background-color: gray;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+/* TOPICS
+------------------------------- */
+.topics_container {
+    /* display: flex; */
+    grid-template-columns: 3fr;
+    gap: 10px;
+}
+
+.topic_caption {
+    display: flex;
+}
+
+.topic_caption:nth-child(2) {
+    gap: 10px;
+}
+
+.topic_title {
+    background-color: gray;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 45%;
+    display: flex;
+}
+
+.topic_title .title_en {
+    background-color: lightgray;
+}
+
+.topic_title .title_jp {
+    background-color: lightgray;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+.topic_img {
+    justify-content: center;
+    /* border-style: solid; */
+    display: flex;
+    background-color: gray;
+}
+
+.photo {
+    background-color: lightgray;
+    margin-bottom: 20px;
+}
+
+.topic_text {
+    background-color: gray;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.schedule_list {
+    background-color: gray;
+    margin-bottom: 20px;
+}
+
+.schedule {
+    background-color: gray;
+    margin-bottom: 20px;
+    display: flex;
+    list-style: none;
+}
+
+.schedule li {
+    margin-right: 20px;
+    background-color: lightgray;
+}
+
+.schedule_list p {
+    background-color: lightgray;
+}
+
+/* ATTORNEY
+------------------------------- */
+.attorney {
+    margin: 20px auto;
+}
+
+.attorney_title {
+    background-color: gray;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 45%;
+    display: flex;
+}
+
+.attorney_title .title_en {
+    background-color: lightgray;
+}
+
+.attorney_title .title_jp {
+    background-color: lightgray;
+    margin-left: 20px;
+    padding-top: 10px;
+    width: 30%;
+
+}
+
+.attorney_text {
+    background-color: gray;
+    width: 70%;
+    margin-top: 40px;
+}
+
+.attorney p {
+    background-color: lightgray;
+    width: 80%;
+}
+
+.attorney_menu {
+    margin-top: 40px;
+    background-color: gray;
+    width: 30%;
+}
+
+.attorney_menu p {
+    background-color: lightgray;
+    width: 80%;
+}
+
+/* AREA
+------------------------------- */
+.area_fileld {
+    margin: 20px auto;
+    gap: 10px;
+}
+
+.area_title {
+    background-color: gray;
+    width: 65%;
+    display: flex;
+}
+
+.area_title .title_en {
+    background-color: lightgray;
+}
+
+.area_title .title_jp {
+    background-color: lightgray;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+.area_text {
+    background-color: gray;
+    margin-top: 10px;
+}
+
+.area_text p {
+    background-color: lightgray;
+    width: 50%;
+
+}
+
+.area_menu {
+    background-color: gray;
+    width: 30%;
+    margin-top: 10px;
+}
+
+.area_menu p {
+    background-color: lightgray;
+    width: 80%;
+}
+
+/* ABOUT
+------------------------------- */
+.about_us {
+    margin: 20px auto;
+    gap: 10px;
+}
+
+.about_title {
+    background-color: gray;
+    width: 65%;
+    display: flex;
+}
+
+.about_title .title_en {
+    background-color: lightgray;
+}
+
+.about_title .title_jp {
+    background-color: lightgray;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+.about_text {
+    background-color: gray;
+    margin-top: 10px;
+}
+
+.about_text p {
+    background-color: lightgray;
+    width: 50%;
+}
+
+.content_sentence {
+    background-color: gray;
+    margin-top: 10px;
+}
+
+.about_menu {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.menu_philosophy {
+    background-color: gray;
+    margin-top: 10px;
+}
+
+.menu_information {
+    background-color: gray;
+    margin-top: 10px;
+}
+
+/* NEWS
+------------------------------- */
+.news_container {
+    display: flex;
+    grid-column: 1 / 3;
+    width: 100%;
+    gap: 10px;
+    margin: 20px auto;
+}
+
+/*  news_title_global  */
+.news_title_global,
+.news_schedule {
+    /* border-style: solid; */
+    justify-content: center;
+}
+
+.news_title_global {
+    width: 33%;
+}
+
+.news_schedule {
+    width: 67%;
+}
+
+.title_en_global {
+    background-color: gray;
+}
+
+.title_jp_global {
+    background-color: gray;
+    margin-top: 10px;
+
+}
+
+.title_en_global h2 {
+    background-color: lightgray;
+    margin: 0 155px 0 0;
+}
+
+.title_jp_global p {
+    background-color: lightgray;
+    margin: 0 199px 0 0;
+}
+
+.more {
+    background-color: gray;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    width: 50%;
+}
+
+/*  news_schedule  */
+.news_schedule_list {
+    background-color: gray;
+    margin-bottom: 20px;
+    height: 134px;
+}
+
+.schedule_last li {
+    margin: 10px 10px 10px 0;
+    background-color: lightgray;
+}
+
+.schedule_last {
+    display: flex;
+    list-style: none;
+}
+
+.note {
+    background-color: lightgray;
+}
+
+/* FOOTER
+------------------------------- */
+.footer_container {
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.footer_logo {
+    background-color: gray;
+    height: 50px;
+}
+
+.footer_logo_img {
+    background-color: lightgray;
+}
+
+.footer_adress {
+    background-color: gray;
+    margin-top: 25px;
+    height: 286px;
+}
+
+.adress {
+    background-color: lightgray;
+}
+
+/* footer_nav */
+.footer_nav {
+    height: 362px;
+    background-color: gray;
+}
+
+.footer_nav p {
+    background-color: lightgray;
+    margin-bottom: 35px;
+}
+
+.policy {
+    background-color: gray;
+    margin-top: 25px;
+}
+
+.child p {
+    margin-bottom: 10px;
+}
+
+.child> :last-child {
+    margin-bottom: 35px;
+}
+
+.pagetop ,.arow {
+    background-color: lightgray;
+    margin-bottom: 20px;
+    height: 25px;
+}
+.footer_pagetop {
+    background-color: gray;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 362px;
+}
+ 
+/* COPYRIGHT
+------------------------------- */
+.wrapper {
+    background-color: gray;
+}
+
+.wrapper p {
+    background-color: lightgray;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+ 
